@@ -15,8 +15,10 @@ function Terminal() {
       </span>
     ),
     about: () => {
+      const id = crypto.randomUUID();
+
       return (
-        <span>
+        <span key={id}>
           <br />
           James Maguire - Software Engineer at{" "}
           <a href="https://moia.io" target="_blank" style={{ color: "white" }}>
@@ -53,7 +55,7 @@ function Terminal() {
               }}
             ></div>
             <div style={{ zIndex: "0" }}>
-              <Signature size={200} />
+              <Signature id={id} size={200} />
             </div>
           </div>
         </span>

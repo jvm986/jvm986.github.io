@@ -25,5 +25,8 @@ div {
 .animated-svg path {
   z-index: -1;
   stroke-dasharray: 5100, 5100;
+}
+
+.animated-svg.animate path {
   animation: draw 3s linear;
 }
