@@ -1,15 +1,29 @@
 #root {
-  max-width: 1280px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
 .App {
   text-align: center;
-  margin: 5% 8%;
+  margin: 5% 5%;
   height: 40em;
 }
 div {
   overflow-y: auto !important;
+}
+
+@keyframes draw {
+  from {
+    stroke-dasharray: 0, 5100;
+  }
+  to {
+    stroke-dasharray: 5100, 0;
+  }
+}
+
+.animated-svg path {
+  z-index: -1;
+  stroke-dasharray: 5100, 5100;
+  animation: draw 3s linear;
 }
